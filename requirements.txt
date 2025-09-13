@@ -1,0 +1,6 @@
+psycopg2-binary
+numpy
+pandas
+scikit-learn
+python-dotenv
+paho-mqtt

@@ -1,0 +1,4 @@
+paho-mqtt
+sounddevice
+numpy
+smbus2
