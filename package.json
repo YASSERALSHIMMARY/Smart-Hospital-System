@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "isolation-forest": "^0.0.9",
+    "mqtt": "^5.10.4",
+    "pg": "^8.14.0"
+  }
+}
