@@ -1,0 +1,74 @@
+<!--
+  index.html
+  ---------------------------------------------------------------------------
+  Purpose:
+    - Front-end page for the Smart Hospital System dashboard.
+    - Shows basic patient info, live sensor readings, and active alerts.
+    - Links to a separate charts page for historical detection graphs.
+
+  How it works:
+    1) HTML defines sections for patient vitals, sensor monitoring, and alerts.
+    2) dashboard.js updates elements (like #room-light and #sound-status)
+       in real time using data from the server/MQTT.
+    3) alarm.mp3 plays through the hidden audio tag when an alert occurs.
+  ---------------------------------------------------------------------------
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Hospital Dashboard</title>
+  <!-- Link to CSS for layout and design -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Defer ensures the script loads after HTML parsing -->
+  <script src="dashboard.js" defer></script>
+</head>
+<body>
+  <!-- Page Header -->
+	<header>
+		<h1>Smart Hospital System</h1>
+	</header>
+
+	<main>
+    <!-- Static demo patient info; can be replaced with live data -->
+		<section id="patient-info">
+			<h2>Patient Vitals</h2>
+			<table>
+				<tbody>
+				<tr><td>Patient Name:</td><td>John Doe</td></tr>
+				<tr><td>Temperature:</td><td>36.8 °C</td></tr>
+				<tr><td>Heart Rate:</td><td>78 bpm</td></tr>
+				<tr><td>Oxygen Level:</td><td>98%</td></tr>
+				</tbody>
+			</table>
+		</section>
+
+    <!-- Live sensor readings updated by dashboard.js -->
+		<section id="room-readings">
+			<h2>Sensor Monitoring</h2>
+			<table>
+			<tbody>
+			<tr><td>Light:</td><td id="room-light">--</td></tr>
+			<tr><td>Sound Status:</td><td id="sound-status">--</td></tr>
+			</tbody>
+		  </table>
+		</section>
+
+    <!-- Alert list populated dynamically when anomalies are detected -->
+		<section id="alerts">
+		<h2>Alerts</h2>
+		<ul id="alert-list"></ul>
+		</section>
+	</main>
+
+  <!-- Link to a separate page showing detection charts -->
+	<div style="text-align: center; margin-top: 20px;">
+		<a href="charts.html" class="charts-button">View Detection Charts</a>
+	</div>
+
+  <!-- Hidden elements for pop-up alert and sound playback -->
+	<div id="popup-alert" class="hidden"></div>
+	<audio id="alert-sound" src="alarm.mp3" preload="auto"></audio>
+</body>
+</html>

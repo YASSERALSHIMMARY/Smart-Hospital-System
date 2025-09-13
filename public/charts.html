@@ -1,0 +1,84 @@
+<!--
+  charts.html
+  ---------------------------------------------------------------------------
+  Purpose:
+    - Display live charts for sound features used in anomaly detection.
+    - Four charts show RMS and ZCR results from Kalman Filter
+      and Isolation Forest detection methods.
+
+  How it works:
+    1) chart.js draws responsive charts inside <canvas> elements.
+    2) charts.js fetches live sensor values and updates each chart.
+    3) The layout uses a CSS grid to place charts in two columns.
+
+  Uses Chart.js (https://www.chartjs.org/) for interactive charts.
+  ---------------------------------------------------------------------------
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Sound Charts</title>
+  <!-- Chart.js library provides real-time plotting -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Custom script updates each chart with sensor data -->
+  <script src="charts.js" defer></script>
+  <style>
+    /* Basic page styling for a light, clean look */
+    body {
+      font-family: Arial;
+      margin: 0;
+      padding: 10px;
+      background: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+    }
+    /* Grid with two columns for the four charts */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 25px;
+      column-gap: 10px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    /* Chart container with light shadow and rounded corners */
+    .chart-box {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      height: 230px;
+    }
+    /* Force canvas to fill its container */
+    canvas {
+      width: 100% !important;
+      height: 200px !important;
+    }
+  </style>
+</head>
+<body>
+  <h1>Live Sound Feature Charts</h1>
+  <div class="grid">
+    <!-- Each chart shows a specific feature and method -->
+    <div class="chart-box">
+      <canvas id="kalmanRmsChart"></canvas>
+      <div style="text-align:center; margin-top: 4px;">Kalman RMS</div>
+    </div>
+    <div class="chart-box">
+      <canvas id="kalmanZcrChart"></canvas>
+      <div style="text-align:center; margin-top: 4px;">Kalman ZCR</div>
+    </div>
+    <div class="chart-box">
+      <canvas id="isoRmsChart"></canvas>
+      <div style="text-align:center; margin-top: 4px;">Isolation Forest RMS</div>
+    </div>
+    <div class="chart-box">
+      <canvas id="isoZcrChart"></canvas>
+      <div style="text-align:center; margin-top: 4px;">Isolation Forest ZCR</div>
+    </div>
+  </div>
+</body>
+</html>
