@@ -6,6 +6,10 @@ It uses Raspberry Pi sensors, Kalman Filter, and Isolation Forest to filter nois
 
 ---
 
+## Acknowledgements
+I would like to thank my supervisor, Dr. [Ciaran O'Driscoll], for guidance and feedback throughout this project.
+
+
 
 ## Video
 - Watch the system in action: [Full System](https://youtu.be/rUh_WAEogOs).
@@ -127,3 +131,12 @@ No patient-identifiable health data (PHI) is used.
 
 ## License
 MIT License — free to use, modify, and distribute.
+
+
+## References
+- Tarassenko, L. et al. "Non-contact video-based vital sign monitoring using ambient light and autoregressive models." Physiological Measurement, 35(5), 2014. https://doi.org/10.1088/0967-3334/35/5/807
+- Naik, K. S., & Sudarshan, E. "Smart Healthcare Monitoring System Using Raspberry Pi on IoT Platform." 2019.
+- Huang, H.-W. et al. "Agile mobile robotic platform for contactless vital signs monitoring." TechRxiv, 2024. https://www.authorea.com/doi/full/10.36227/techrxiv.12811982.v1
+- Mireles, C. et al. "Home-care nursing controlled mobile robot with vital signal monitoring." Medical & Biological Engineering & Computing, 61(2), 2023. https://doi.org/10.1007/s11517-022-02712-y
+- Hospital Ambient Noise Dataset. https://www.kaggle.com/datasets/nafin59/hospital-ambient-noise
+- Coswara Cough and Sound Dataset. https://github.com/iiscleap/Coswara-Data/tree/master
