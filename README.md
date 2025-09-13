@@ -6,6 +6,11 @@ It uses Raspberry Pi sensors, Kalman Filter, and Isolation Forest to filter nois
 
 ---
 
+
+## Video
+Watch the system in action: [Full System](https://youtu.be/rUh_WAEogOs)
+Watch the robot in move:     [Robot] (https://youtu.be/J6L9eNOmw_o)
+
 ## Overview
 - **Smart Room (Raspberry Pi / CrowPi)**  
   Collects light and sound data → publishes via MQTT.
