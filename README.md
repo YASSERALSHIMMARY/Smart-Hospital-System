@@ -7,7 +7,7 @@ It uses Raspberry Pi sensors, Kalman Filter, and Isolation Forest to filter nois
 ---
 
 ## Acknowledgements
-I would like to thank my supervisor, Dr. [Ciaran O'Driscoll], for guidance and feedback throughout this project.
+I would like to thank my supervisor, **Dr. Ciaran O'Driscoll**, for guidance and feedback throughout this project.
 
 
 
